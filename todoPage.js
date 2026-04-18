@@ -133,15 +133,15 @@ const createNewTask = (task) => {
     </div>
     <div class="card-body">
         <p data-testid="test-todo-description">${task.description}</p>
-        <div data-testid="test-todo-priority">${task.priority}</div>
-        <time data-testid="test-todo-due-date" datetime="${task.dueDate}">${formattedDate}</time>
-        <time data-testid="test-todo-time-remaining" datetime="${task.dueDate}">${getTimeRemaining(task.dueDate)}</time>
-        <span data-testid="test-todo-status">Pending</span>
+        <div data-testid="test-todo-priority">Priority: ${task.priority}</div>
+        <time data-testid="test-todo-due-date" datetime="${task.dueDate}">Due date: ${formattedDate}</time>
+        <time data-testid="test-todo-time-remaining" datetime="${task.dueDate}">Remaining Time: ${getTimeRemaining(task.dueDate)}</time>
+        <span data-testid="test-todo-status">Progress: Pending</span>
         <ul data-testid="test-todo-tags">
         ${tagsHTML}
         </ul>
-        <button data-testid="test-todo-edit-button">Edit</button>
-        <button data-testid="test-todo-delete-button">Delete</button>
+        <button id="edit-button" data-testid="test-todo-edit-button">Edit</button>
+        <button id="delete-button" data-testid="test-todo-delete-button">Delete</button>
     </div>    
     `;
 
